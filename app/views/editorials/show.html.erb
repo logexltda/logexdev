@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Rut:</strong>
+  <%= @editorial.editorial_rut %>
+</p>
+
+<p>
+  <strong>Razon Social:</strong>
+  <%= @editorial.editorial_razon_social %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @editorial.editorial_direccion %>
+</p>
+
+<p>
+  <strong>Email de contacto:</strong>
+  <%= @editorial.editorial_email_contacto %>
+</p>
+
+<p>
+  <strong>Nombre de Contacto:</strong>
+  <%= @editorial.editorial_nombre_contacto %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @editorial.editorial_descripcion %>
+</p>
+
+<%= link_to 'Modificar', edit_editorial_path(@editorial) %> |
+<%= link_to 'Volver', editorials_path %>

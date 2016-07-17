@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  editorial_rut: MyString
+  editorial_razon_social: MyString
+  editorial_direccion: MyString
+  editorial_email_contacto: MyString
+  editorial_nombre_contacto: MyString
+  editorial_descripcion: MyText
+
+two:
+  editorial_rut: MyString
+  editorial_razon_social: MyString
+  editorial_direccion: MyString
+  editorial_email_contacto: MyString
+  editorial_nombre_contacto: MyString
+  editorial_descripcion: MyText

@@ -1,0 +1,2 @@
+module BookEntryDetailsHelper
+end

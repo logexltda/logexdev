@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Book Entry Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Cantidad de Ejemplares</th>
+      <th>Cabecera</th>
+      <th>Codigo_libro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_entry_details.each do |book_entry_detail| %>
+      <tr>
+        <td><%= book_entry_detail.bookentrydetail_titulo= book_entry_detail.book.book_titulo %></td>
+        <td><%= book_entry_detail.bookentrydetail_cantidad_ejemplares %></td>
+        <td><%= book_entry_detail.bookentry_id %></td>
+        <td><%= book_entry_detail.book_id %></td>
+        <td><%= link_to 'Show', book_entry_detail %></td>
+        <td><%= link_to 'Edit', edit_book_entry_detail_path(book_entry_detail) %></td>
+        <td><%= link_to 'Destroy', book_entry_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book entry detail', new_book_entry_detail_path %>

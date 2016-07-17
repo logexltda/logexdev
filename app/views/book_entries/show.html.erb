@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bookentry tipo documento:</strong>
+  <%= @book_entry.bookentry_tipo_documento %>
+</p>
+
+<p>
+  <strong>Bookentry numero documento:</strong>
+  <%= @book_entry.bookentry_numero_documento %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @book_entry.string %>
+</p>
+
+<p>
+  <strong>Bookentry fecha ingreso:</strong>
+  <%= @book_entry.bookentry_fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Editorial nombre:</strong>
+  <%= @book_entry.editorial_nombre %>
+</p>
+
+<%= link_to 'Edit', edit_book_entry_path(@book_entry) %> |
+<%= link_to 'Back', book_entries_path %>

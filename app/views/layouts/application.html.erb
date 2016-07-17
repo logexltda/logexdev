@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logex</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+	
+
+<% if user_signed_in? %>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#acolapsar">
+					<span class="sr-only">Navegación</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">LOGEX</a> 
+
+			</div>
+
+			<div class="collpase navbar-collpase" id="acolapsar">
+				<ul class="nav navbar-nav">
+					<li> <a href="#" > <span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+					<li> <%= link_to 'Editar Perfil', edit_user_registration_path, :class => 'navbar-link' %><span class="glyphicon glyphicon-home"></span> </li>
+					<li> <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> <span class="glyphicon glyphicon-home"></span> </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manetenedores<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+							<li><a href="#">Link 4</a></li>
+							<li><a href="#">Link 5</a></li>
+						</ul>
+					</li>
+					<li> <span class="glyphicon glyphicon-home"></span> Identificado como <strong><%= current_user.email %></strong></li>
+				</ul>
+
+			</div>	
+
+		</div>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		
+	</nav>
+hola
+	<div id="menu">
+			</div>
+
+</div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

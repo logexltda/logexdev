@@ -1,0 +1,39 @@
+<%= form_for(@book_entry) do |f| %>
+  <% if @book_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book_entry.errors.count, "error") %> prohibited this book_entry from being saved:</h2>
+
+      <ul>
+      <% @book_entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="jumbotron boxformulario">
+  <div class="field">
+    <%= f.label :bookentry_tipo_documento %><br>
+    <%= f.select :bookentry_tipo_documento, {'GUIA DE DESPACHO' => 'GUIA DE DESPACHO', 'FACTURA' => 'FACTURA',  'OTRO' => 'OTRO'} %>
+  </div>
+  <div class="field">
+    <%= f.label :bookentry_numero_documento %><br>
+    <%= f.text_field :bookentry_numero_documento %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :bookentry_fecha_ingreso %><br>
+    <%= f.datetime_select :bookentry_fecha_ingreso %>
+  </div>
+  <div class="field">
+    <%= f.label :editorial_nombre %><br>
+    <%= collection_select :book_entry, :editorial_nombre, Editorial.order(:editorial_razon_social), :editorial_razon_social, :editorial_razon_social, prompt: 'Seleccione Editorial'%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

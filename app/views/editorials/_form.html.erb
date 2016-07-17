@@ -1,0 +1,67 @@
+<%= form_for(@editorial) do |f| %>
+
+<div class="jumbotron boxformulario">
+<form class="form-horizontal">
+  <div class="form-group">
+    <%= f.label "Rut", class: "col-xs-3 control-label" %>
+    <div class="col-xs-9">
+      <%= f.text_field :editorial_rut,  class: "form-control", placeholder: "Rut Editorial"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Razon Social", class: "col-xs-3 control-label"%>
+    <div class="col-xs-9">
+     <%= f.text_field :editorial_razon_social, class: "form-control", placeholder: "Razón Social"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Direccion", class: "col-xs-3 control-label" %>
+    <div class="col-xs-9">
+      <%= f.text_field :editorial_direccion, class: "form-control", placeholder: "Dirección Editorial"%>
+     </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Email de Contacto", class: "col-xs-3 control-label" %>
+    <div class="col-xs-9">
+      <%= f.text_field :editorial_email_contacto, class: "form-control", placeholder: "Correo" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Nombre de Contacto", class: "col-xs-3 control-label"%>
+    <div class="col-xs-9">
+      <%= f.text_field :editorial_nombre_contacto, class: "form-control", placeholder: "Nombre Contacto"%>
+     </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Descripción", class: "col-xs-3 control-label" %>
+    <div class="col-xs-9">
+      <%= f.text_area :editorial_descripcion, class: "form-control", placeholder: "Descripción" %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary btn-sm" %>
+  </div>
+
+<% end %>
+</form>
+</div>
+
+
+  <% if @editorial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@editorial.errors.count, "error") %> prohibited this editorial from being saved:</h2>
+
+      <ul>
+      <% @editorial.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+

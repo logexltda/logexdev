@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bookentry_tipo_documento: MyString
+  bookentry_numero_documento: MyString
+  string: MyString
+  bookentry_fecha_ingreso: 2016-07-16 12:09:32
+  editorial_nombre: MyString
+
+two:
+  bookentry_tipo_documento: MyString
+  bookentry_numero_documento: MyString
+  string: MyString
+  bookentry_fecha_ingreso: 2016-07-16 12:09:32
+  editorial_nombre: MyString

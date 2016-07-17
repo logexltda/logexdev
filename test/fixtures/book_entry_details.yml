@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bookentrydetail_titulo: MyString
+  bookentrydetail_cantidad_ejemplares: 1
+  bookentry_id: 1
+  book_id: 1
+
+two:
+  bookentrydetail_titulo: MyString
+  bookentrydetail_cantidad_ejemplares: 1
+  bookentry_id: 1
+  book_id: 1
